@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe Game</title>
+    <link rel="icon" type="image/svg+xml" href="icns/tic-tac-toe-svgrepo-com.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="js-file.js" defer></script>
+</head>
+
+<body>
+    <div class="all">
+        <button data-open-modal>Start</button>
+        <dialog data-modal>
+            <form method="dialog" id="form">
+                <p>Player 1 Name:</p>
+                <label for="name_1">
+                    <input type="text" id="name_1" name="name_1">
+                </label>
+
+                <p>Player 2 Name:</p>
+                <label for="name_2">
+                    <input type="text" id="name_2" name="name_2">
+                </label>
+                <br>
+                <br>
+                <button data-create-modal>Start Game</button>
+                <button data-cancel-modal>Cancel</button>
+            </form>
+        </dialog>
+    </div>
+
+</body>
+
+</html>
