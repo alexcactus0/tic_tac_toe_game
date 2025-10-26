@@ -1,0 +1,156 @@
+
+:root {
+    --txt_clr: #F0F6FC;
+    --darkGreen: #238636;
+    --lightGreen: #2EA043;
+    --yellow-rainbow: linear-gradient(45deg,#FFD700,#FFA500,#FF7F50,#ADFF2F);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-color: #0D1117;
+    color: var(--txt_clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    gap: 50px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    width: fit-content;
+    display: flex;
+    gap: 50px;
+}
+
+.gameBoard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board {
+    background-color: transparent;
+    border: solid 3px #30363D;
+    width: 550px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-bottom: 50px;
+}
+
+.player1,
+.player2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    place-items: center;
+    border: solid 2px white;
+    width: 250px;
+    height: 400px;
+}
+
+.first_row,
+.second_row,
+.third_row {
+    height: 100%;
+    width: 100%;
+    border: solid 2px #30363D;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.first_row:hover,
+.second_row:hover,
+.third_row:hover {
+    background-color: #21262D;
+}
+
+button {
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    align-items: end;
+    gap: 50px;
+    height: 60px;
+}
+.buttons > button {
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
+    border: none;
+    background-color: #DC143C;
+    font-weight: bold;
+    color: var(--txt_clr);
+}
+.buttons button:first-child {
+    background-color: var(--darkGreen);
+    color: var(--txt_clr);
+}
+.buttons > button:hover {
+    background-color: #f35b24ed;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+input:hover{
+    cursor: pointer;
+}
+input:focus {
+    border: solid 2px;
+
+}
+
+.start {
+    color: var(--txt_clr);
+    border: none;
+    font-weight: bold;
+    border-radius: 7px;
+    background-color: var(--darkGreen);
+    width: 150px;
+    height: 50px;
+}
+.start:hover {
+    background-color: var(--lightGreen);
+}
+
+.options {
+    padding: 13px;
+}
+
+dialog {
+    padding: 20px;
+    border: solid 1px #30363D;
+    background-color: #161B22;
+    color: var(--txt_clr);
+    border-radius: 12px;
+    height: 350px;
+    width: 300px;
+
+}

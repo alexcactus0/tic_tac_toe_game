@@ -11,23 +11,45 @@
 </head>
 
 <body>
+    <div class="header">
+        <h1>Welcome to Tic Tac Toe Game!</h1>
+        <h1>Please press the button to start the Game</h1>
+    </div>
     <div class="all">
-        <button data-open-modal>Start</button>
+
+        <button data-open-modal class="start">Start Game</button>
         <dialog data-modal>
             <form method="dialog" id="form">
                 <p>Player 1 Name:</p>
                 <label for="name_1">
-                    <input type="text" id="name_1" name="name_1">
+                    <input type="text" id="name_1" name="name_1" required>
                 </label>
-
+                <div class="options">
+                    <Label for="X1">Option X
+                        <input type="radio" id="X1" name="option">
+                    </Label>
+                    <label for="O1">Option O
+                        <input type="radio" id="O1" name="option">
+                    </label>
+                </div>
                 <p>Player 2 Name:</p>
                 <label for="name_2">
-                    <input type="text" id="name_2" name="name_2">
+                    <input type="text" id="name_2" name="name_2" required>
                 </label>
+                <div class="options">
+                    <Label for="X2">Option X
+                        <input type="radio" id="X2" name="option1">
+                    </Label>
+                    <label for="O2">Option O
+                        <input type="radio" id="O2" name="option1">
+                    </label>
+                </div>
                 <br>
                 <br>
-                <button data-create-modal>Start Game</button>
-                <button data-cancel-modal>Cancel</button>
+                <div class="buttons">
+                    <button data-create-modal>Start Game</button>
+                    <button data-cancel-modal>Cancel</button>
+                </div>
             </form>
         </dialog>
     </div>
